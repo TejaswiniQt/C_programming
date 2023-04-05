@@ -1,0 +1,28 @@
+//String reverse program
+
+#include <stdio.h>
+#include <string.h>
+
+char reverse_str(char str1[])
+{
+    int i, len;
+    char ch;
+    len = strlen(str1);
+    for(i=0;i<len/2;i++)
+    {
+        ch = str1[i];
+        str1[i] = str1[len-1-i];
+        str1[len-1-i] = ch;
+    }
+    printf("Reversed string is: %s",str1);
+}
+
+int main()
+{
+    char str1[30];
+    printf("Enter the string: ");
+    gets(str1);
+    reverse_str(str1);
+
+    return 0;
+}
